@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Signal — Instagram Inbox</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h1>Signal</h1>
+        <p class="subtitle">Private Instagram log</p>
+      </div>
+      <div id="conversation-list" class="conversation-list">
+        <div class="empty-state">Waiting for the first message…</div>
+      </div>
+    </aside>
+
+    <main class="thread">
+      <div id="thread-header" class="thread-header hidden">
+        <span class="thread-username"></span>
+        <span class="thread-id"></span>
+      </div>
+
+      <div id="thread-messages" class="thread-messages">
+        <div class="empty-state main-empty">
+          <p>Select a conversation</p>
+          <p class="empty-sub">Incoming messages will appear here as they arrive — nothing is marked as read on Instagram.</p>
+        </div>
+      </div>
+
+      <form id="reply-form" class="reply-form hidden">
+        <textarea id="reply-text" placeholder="Type a reply…" rows="1"></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </main>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>

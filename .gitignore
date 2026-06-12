@@ -1,0 +1,5 @@
+node_modules/
+.env
+ig_dashboard.json
+ig_dashboard.json.tmp
+*.log
